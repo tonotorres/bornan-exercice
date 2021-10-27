@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Bornan ejercicio</title>
+    <% include partials/head %>
+  </head>
+  <body>
+
+    <!-- HEADER -->
+    <% include partials/navigation %>
+
+    <div class="container">
+      <header class="row">
+        <div class="col-lg-12 text-center">
+          <!-- EJERCICIO 1 -->
+          <div class="card rounded">
+            <h5 class="card-title">Array de numeros (Ejercicio 1)</h5>
+            <table class="table">
+              <thead class="thead-dark">
+                <tr>
+                  <script>
+                    for(m=1;m<13;m++){
+                      document.write("<th>"+ m + "</th>")
+                    }
+                  </script>
+                </tr>
+              </thead>
+              <tbody class="bg-numbers">
+                <tr>
+                  <% for (var i =0; i <=11;  i++ ) { %>
+                    <td> <%= showArrayNumbers()[i] %> </td> 
+                  <% } %> 
+            </table>
+            <div class="d-flex flex-row">
+              <div class="p-2">Numero maximo:</div>
+              <div class="p-2"><%= ejercicio1() %></div>
+            </div>
+          </div>
+
+          <!-- EJERCICIO 2 -->
+          <div class="card rounded">
+            <h5 class="card-title">Array de numeros (Ejercicio 2)</h5>
+            <table class="table">
+              <thead class="thead-dark">
+                <tr>
+                  <script>
+                    for(m=1;m<13;m++){
+                      document.write("<th>"+ m + "</th>")
+                    }
+                  </script>
+                </tr>
+              </thead>
+              <tbody class="bg-numbers">
+                <tr>
+                  <% for (var i =0; i <=11;  i++ ) { %>
+                    <td> <%= showArrayNumbers()[i] %> </td> 
+                  <% } %> 
+            </table>
+            <h5 class="card-title">Nuevo array de numeros</h5>
+            <table class="table">
+              <thead class="thead-dark">
+                <tr>
+                  <script>
+                    for(m=1;m<13;m++){
+                      document.write("<th>"+ m + "</th>")
+                    }
+                  </script>
+                </tr>
+              </thead>
+              <tbody class="bg-numbers">
+                <tr>
+                  <% for (var i =0; i <=11;  i++ ) { %>
+                    <td> <%= ejercicio2(12)[i] %> </td> 
+                  <% } %> 
+            </table>
+          </div>
+
+          <!-- EJERCICIO 2BIS -->
+          <div class="card rounded">
+            <h5 class="card-title">Array de numeros (Ejercicio 2Bis)</h5>
+            <table class="table">
+              <thead class="thead-dark">
+                <tr>
+                  <script>
+                    for(m=1;m<13;m++){
+                      document.write("<th>"+ m + "</th>")
+                    }
+                  </script>
+                </tr>
+              </thead>
+              <tbody class="bg-numbers">
+                <tr>
+                  <% for (var i =0; i <=11;  i++ ) { %>
+                    <td> <%= showArrayNumbers()[i] %> </td> 
+                  <% } %> 
+            </table>
+            <h5 class="card-title">Nuevo array de numeros con subarray establecido en 7</h5>
+            <table class="table">
+              <thead class="thead-dark">
+                <tr>
+                  <script>
+                    for(m=1;m<13;m++){
+                      document.write("<th>"+ m + "</th>")
+                    }
+                  </script>
+                </tr>
+              </thead>
+              <tbody class="bg-numbers">
+                <tr>
+                  <% for (var i =0; i <=11;  i++ ) { %>
+                    <td> <%= ejercicio2(7)[i] %> </td> 
+                  <% } %> 
+            </table>
+          </div>
+          <!-- EJERCICIO 3 -->
+          <div class="card rounded">
+            <h5 class="card-title">Array de numeros (Ejercicio 3-4)</h5>
+            <table class="table">
+              <thead class="thead-dark">
+                <tr>
+                  <script>
+                    for(m=1;m<13;m++){
+                      document.write("<th>"+ m + "</th>")
+                    }
+                  </script>
+                </tr>
+              </thead>
+              <tbody class="bg-numbers">
+                <tr>
+                  <% for (var i =0; i <=11;  i++ ) { %>
+                    <td> <%= showArrayNumbersExercice3()[i] %> </td> 
+                  <% } %> 
+            </table>
+            <h5 class="card-title">Nuevo array ordenado</h5>
+            <table class="table">
+              <thead class="thead-dark">
+                <tr>
+                  <script>
+                    for(m=1;m<13;m++){
+                      document.write("<th>"+ m + "</th>")
+                    }
+                  </script>
+                </tr>
+              </thead>
+              <tbody class="bg-numbers">
+                <tr>
+                  <% for (var i =0; i <=11;  i++ ) { %>
+                    <td> <%= showArrayModified()[i] %> </td> 
+                  <% } %> 
+            </table>
+          </div>
+        </div>
+      </header>
+    </div>
+
+
+
+    <!-- section one -->
+    <div class="container-fluid" id="about">
+      <div class="row bg-dark text-white p-5 text-center">
+        <div class="col-lg-12 text-center">
+          <h3>En el archivo index.js estan las funciones que he implementado.</h3>
+          <p>
+            <span>De nuevo disculpad el retraso, espero poder tener una oportunidad igualmente, muchas gracias.</span>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+    <% include partials/footer %>
+
+    <!-- JAVASCRIPT CDNS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+  </body>
+</html>
+
+<style>
+  .card {
+    padding: 25px;
+    border: 3px;
+    border-radius: 25px;
+    margin-bottom: 50px;
+  }
+  .bg-numbers {
+    background-color:rgb(202, 202, 202);
+  }
+</style>
